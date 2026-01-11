@@ -60,6 +60,7 @@ dependencies:
   - zeromq=4.3.5=h6a678d5_0
   - zlib=1.2.13=h5eee18b_1
   - pip:
+      - papermill==2.5.0
       - anndata==0.10.9
       - array-api-compat==1.9.1
       - attrs==24.2.0
@@ -144,4 +145,3 @@ dependencies:
       - webencodings==0.5.1
       - xyzservices==2025.4.0
       - zipp==3.21.0
-prefix: /home/mazen.khaddour/miniconda3/envs/leiden

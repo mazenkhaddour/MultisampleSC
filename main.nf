@@ -15,14 +15,14 @@ if (params.samplesheet == null) {
 process QC_Filtering {
     conda "${baseDir}/env/base.yml" 
 
-  publishDir { "${params.outdir}/${sample_id}/qc" }, mode: 'copy'
+  publishDir { "${params.outdir}/1_QC/${sample_id}" }, mode: 'copy'
 
   input:
     tuple val(sample_id), path(input_h5ad)
 
   output:
     tuple val(sample_id), path("${sample_id}_filtered.h5ad"), emit: h5ad
-    path("qc_report.ipynb"), emit: notebook
+    path("qc_report_${sample_id}.ipynb"), emit: notebook
 
   script:
   """
